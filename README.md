@@ -1,29 +1,48 @@
-# sopa-de-letras
+# Sopa de Letras (Word Search)
 
-This template should help get you started developing with Vue 3 in Vite.
+Este proyecto es una implementación de una sopa de letras interactiva utilizando Vue.js. Permite a los usuarios ingresar 5 palabras y generar un puzzle de 15x15 para jugar.
 
-## Recommended IDE Setup
+## Características
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- Interfaz de usuario para ingresar 5 palabras
+- Generación automática de una sopa de letras de 15x15
+- Palabras colocadas en cualquier dirección (horizontal, vertical, diagonal, hacia adelante o hacia atrás)
+- Selección interactiva de palabras en la cuadrícula
+- Verificación de palabras encontradas
+- Contenedorización con Docker para fácil despliegue
 
-## Customize configuration
+## Configuración del Proyecto
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+1. Clonar el repositorio:
+   ```
+   git clone <url-del-repositorio>
+   cd sopa-de-letras
+   ```
 
-## Project Setup
+## Ejecutar el Proyecto
 
-```sh
-npm install
+### Usando Docker Compose
+
+Para iniciar la aplicación usando Docker Compose:
+
+```
+docker-compose up
 ```
 
-### Compile and Hot-Reload for Development
+## Uso
 
-```sh
-npm run dev
-```
+1. Al iniciar la aplicación, verás un campo de entrada para ingresar palabras.
+2. Ingresa 5 palabras, una a la vez, presionando Enter o haciendo clic en "Agregar palabra" después de cada una.
+3. Una vez ingresadas las 5 palabras, haz clic en "Generar sopa de letras".
+4. Busca las palabras en la cuadrícula generada y selecciónalas haciendo clic en las letras.
+5. Haz clic en "Verificar palabra" para comprobar si has encontrado una palabra correcta.
+6. ¡Continúa hasta encontrar todas las palabras!
 
-### Compile and Minify for Production
+## Desarrollo
 
-```sh
-npm run build
-```
+El componente principal `WordSearch.vue` contiene la lógica para:
+- Manejar la entrada de palabras
+- Generar la cuadrícula de la sopa de letras
+- Colocar las palabras en la cuadrícula
+- Manejar la selección de palabras por parte del usuario
+- Verificar las palabras encontradas
